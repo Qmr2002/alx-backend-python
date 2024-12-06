@@ -102,7 +102,6 @@ def insert_data(connection, csv_file):
 
 
 
-# Example usage of the module
 if __name__ == "__main__":
     connection = connect_db()
     if connection:
