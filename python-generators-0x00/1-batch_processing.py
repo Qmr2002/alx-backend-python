@@ -43,7 +43,7 @@ def stream_users_in_batches(batch_size):
                 cursor.close()
             except Error as e:
                 print(f"Error closing cursor: {e}")
-        if connection and connection.is_connected():
+        if connection and connection.is_connected():  # Fixed the typo here
             try:
                 connection.close()
             except Error as e:
