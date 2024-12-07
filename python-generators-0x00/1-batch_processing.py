@@ -22,7 +22,7 @@ def stream_users_in_batches(batch_size):
         connection = mysql.connector.connect(
             host="localhost",
             user="root",  # Replace with your MySQL username
-            password="",  # Replace with your MySQL password
+            password="password",  # Replace with your MySQL password
             database="ALX_prodev"
         )
         cursor = connection.cursor(dictionary=True)
@@ -43,7 +43,7 @@ def stream_users_in_batches(batch_size):
                 cursor.close()
             except Error as e:
                 print(f"Error closing cursor: {e}")
-        if connection and connection.is_connected():  # Fixed the typo here
+        if connection and connection.is_connected():
             try:
                 connection.close()
             except Error as e:
@@ -63,5 +63,3 @@ def batch_processing(batch_size):
             print(user)
 
 
-if __name__ == "__main__":
-    batch_processing(50)
