@@ -14,8 +14,8 @@ def stream_users():
         # Connect to the ALX_prodev database
         connection = mysql.connector.connect(
             host="localhost",
-            user="root",  # Replace with your MySQL username
-            password="",  # Replace with your MySQL password
+            user="root",
+            password="",
             database="ALX_prodev"
         )
         cursor = connection.cursor(dictionary=True)  # Return rows as dictionaries
